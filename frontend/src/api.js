@@ -1,5 +1,6 @@
 
 import axios from "axios"
+// const axios = require("axios")
 
 async function postData(url = "", data = {}) {
     // Default options are marked with *
