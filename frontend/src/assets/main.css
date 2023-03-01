@@ -1,0 +1,103 @@
+@import './base.css';
+
+#app {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30px 200px 1fr;
+}
+
+.app-panel {
+  border-right: 1px solid #eee;
+}
+
+.left-panel {
+  border-right: 1px solid #eee;
+}
+
+.left-panel > * {
+  display: block;
+}
+
+.chat-panel {
+  border-right: 1px solid #eee;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.chat-input-panel {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+.chat-messages-history {
+  overflow-y: scroll;
+  height: calc(100vh - 100px);
+}
+
+.chat-messages-history_inner {
+  padding: 10px;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  white-space: pre;
+  overflow: auto;
+}
+
+.user-message {
+  background: rgb(150, 255, 171);
+}
+
+.bot-message {
+  background: rgb(181, 179, 253);
+}
+
+.error-message {
+  background: rgb(253, 210, 179);
+}
+
+/** loader **/
+.loader {
+  position: absolute;
+  background: rgba(0,0,0,0.2);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+content: " ";
+display: block;
+width: 64px;
+height: 64px;
+margin: 8px;
+border-radius: 50%;
+border: 6px solid #fff;
+border-color: #fff transparent #fff transparent;
+animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
